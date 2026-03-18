@@ -17,14 +17,14 @@
 		.sousa{background-color: pink}
 		.kessoku{background-color: #444; color: white;}
 		.keikai{background-color: yellow}
-		#kijo01{position: absolute; left: 887px; top: 20px; }
-		#kijo02{position: absolute; left: 994px; top: 64px; }
-		#kijo03{position: absolute; left: 830px; top: 820px; }
-		#kijo04{position: absolute; left: 828px; top: 666px; }
-		#kijo05{position: absolute; left: 886px; top: 401px; }
-		#kijo06{position: absolute; left: 300px; top: 350px; }
-		#kijo07{position: absolute; left: 445px; top: 657px; }
-		#kijo08{position: absolute; left: 98px; top: 352px; }
+		#kijo01{position: absolute; left: 797px; top: 20px; }
+		#kijo02{position: absolute; left: 874px; top: 64px; }
+		#kijo03{position: absolute; left: 750px; top: 840px; }
+		#kijo04{position: absolute; left: 807px; top: 666px; }
+		#kijo05{position: absolute; left: 756px; top: 401px; }
+		#kijo06{position: absolute; left: 250px; top: 350px; }
+		#kijo07{position: absolute; left: 345px; top: 700px; }
+		#kijo08{position: absolute; left: 70px; top: 352px; }
 		#div_title{font-size: 16pt; color: #08f; position: absolute; left: 10px; top: 10px; }
 	</style>
 	<script>
@@ -52,7 +52,7 @@
 	</script>
 </head>
 <body>
-	<div id="map"><img src="map3.jpg" style="width: 1500px; height: 900px; "></div>
+	<div id="map"><img src="map3.jpg" style="height: 900px"></div>
 	<div id="div_title">安曇野有明土地改良区　水門監視システム</div>
 	<div id="ctrlPanel">
 		<div id="div_menu">
@@ -64,7 +64,7 @@
 			監視機能デモ
 		</div>
 		<div>
-			新堰頭首工
+			新堰頭首工<br>
 			<input type="button" name="btn1" onclick="ctlSuimon(1, 'tuujo')" class="tuujo" value="通常" >
 			<input type="button" name="btn1" onclick="ctlSuimon(1, 'sousa')" class="sousa" value="操作">
 			<input type="button" name="btn1" onclick="ctlSuimon(1, 'kessoku')" class="kessoku" value="欠測">
@@ -72,7 +72,7 @@
 		</div>
 
 		<div>
-			新堰頭首工(土砂吐)
+			新堰頭首工(土砂吐)<br>
 			<input type="button" name="btn1" onclick="ctlSuimon(2, 'tuujo')" class="tuujo" value="通常" >
 			<input type="button" name="btn1" onclick="ctlSuimon(2, 'sousa')" class="sousa" value="操作">
 			<input type="button" name="btn1" onclick="ctlSuimon(2, 'kessoku')" class="kessoku" value="欠測">
@@ -80,7 +80,7 @@
 		</div>
 
 		<div>
-			新堰1号水位調整ゲート
+			新堰1号水位調整ゲート<br>
 			<input type="button" name="btn1" onclick="ctlSuimon(3, 'tuujo')" class="tuujo" value="通常" >
 			<input type="button" name="btn1" onclick="ctlSuimon(3, 'sousa')" class="sousa" value="操作">
 			<input type="button" name="btn1" onclick="ctlSuimon(3, 'kessoku')" class="kessoku" value="欠測">
@@ -88,7 +88,7 @@
 		</div>
 
 		<div>
-			新堰2号水位調整ゲート
+			新堰2号水位調整ゲート<br>
 			<input type="button" name="btn1" onclick="ctlSuimon(4, 'tuujo')" class="tuujo" value="通常" >
 			<input type="button" name="btn1" onclick="ctlSuimon(4, 'sousa')" class="sousa" value="操作">
 			<input type="button" name="btn1" onclick="ctlSuimon(4, 'kessoku')" class="kessoku" value="欠測">
@@ -96,7 +96,7 @@
 		</div>
 
 		<div>
-			新堰3号水位調整ゲート
+			新堰3号水位調整ゲート<br>
 			<input type="button" name="btn1" onclick="ctlSuimon(5, 'tuujo')" class="tuujo" value="通常" >
 			<input type="button" name="btn1" onclick="ctlSuimon(5, 'sousa')" class="sousa" value="操作">
 			<input type="button" name="btn1" onclick="ctlSuimon(5, 'kessoku')" class="kessoku" value="欠測">
@@ -104,7 +104,7 @@
 		</div>
 
 		<div>
-			大戸井第2取水口
+			大戸井第2取水口<br>
 			<input type="button" name="btn1" onclick="ctlSuimon(6, 'tuujo')" class="tuujo" value="通常" >
 			<input type="button" name="btn1" onclick="ctlSuimon(6, 'sousa')" class="sousa" value="操作">
 			<input type="button" name="btn1" onclick="ctlSuimon(6, 'kessoku')" class="kessoku" value="欠測">
@@ -112,7 +112,7 @@
 		</div>
 
 		<div>
-			富田堰頭首工
+			富田堰頭首工<br>
 			<input type="button" name="btn1" onclick="ctlSuimon(7, 'tuujo')" class="tuujo" value="通常" >
 			<input type="button" name="btn1" onclick="ctlSuimon(7, 'sousa')" class="sousa" value="操作">
 			<input type="button" name="btn1" onclick="ctlSuimon(7, 'kessoku')" class="kessoku" value="欠測">
@@ -120,7 +120,7 @@
 		</div>
 
 		<div>
-			松尾堰頭首工
+			松尾堰頭首工<br>
 			<input type="button" name="btn1" onclick="ctlSuimon(8, 'tuujo')" class="tuujo" value="通常" >
 			<input type="button" name="btn1" onclick="ctlSuimon(8, 'sousa')" class="sousa" value="操作">
 			<input type="button" name="btn1" onclick="ctlSuimon(8, 'kessoku')" class="kessoku" value="欠測">
