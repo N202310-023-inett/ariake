@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>安曇野有明土地改良区－水門状態一覧</title>
+	<style>
+		a{color: #08f; }
+		a:hover{color: gold; }
+		#div_menu a{display: inline-block; border: ridge 2px gray; font-size: 11pt; padding: 1px}
+		#map, #ctrlPanel{display: inline-block; vertical-align: top}
+		#ctrlPanel div{text-align: right; margin: 2em 1em; border-bottom: solid 1px gray; }
+		.lbl{background-color: white; border: solid 1px gray; padding: 3px; font-size: 9pt; display: inline-block;}
+		.lbl2{background-color: white; border: solid 1px gray; padding: 3px; font-size: 9pt; display: inline;}
+		.suimon{width: 40px; }
+		.tuujo{background-color: cyan}
+		.sousa{background-color: pink}
+		.kessoku{background-color: #444; color: white;}
+		.keikai{background-color: yellow}
+		#kijo01{position: absolute; left: 887px; top: 20px; }
+		#kijo02{position: absolute; left: 994px; top: 64px; }
+		#kijo03{position: absolute; left: 830px; top: 820px; }
+		#kijo04{position: absolute; left: 828px; top: 666px; }
+		#kijo05{position: absolute; left: 886px; top: 401px; }
+		#kijo06{position: absolute; left: 300px; top: 350px; }
+		#kijo07{position: absolute; left: 445px; top: 657px; }
+		#kijo08{position: absolute; left: 98px; top: 352px; }
+		#div_title{font-size: 16pt; color: #08f; position: absolute; left: 10px; top: 10px; }
+	</style>
+	<script>
+		window.onload = function()
+		{
+			document.getElementById('map').addEventListener('click', e => mapClk(e) );
+		};
+
+		function mapClk(e)
+		{
+			alert(e.pageX + ', ' + e.pageY);
+		}
+
+		function ctlSuimon(id, imgName)
+		{
+			const delay = new Date().getTime().toString().slice(-1);
+			const to = delay * 1000 / 4;
+			//document.getElementById('temp1').innerText = to;
+			setTimeout( () => {
+				document.getElementById('suimon_' + id).src = imgName + '.png'
+			}, to);
+			
+		}
+
+	</script>
+</head>
+<body>
+	<div id="map"><img src="map3.jpg" style="width: 1500px; height: 900px; "></div>
+	<div id="div_title">安曇野有明土地改良区　水門監視システム</div>
+	<div id="ctrlPanel">
+		<div id="div_menu">
+			<a href="demo2.html">初期化</a>
+			<a href="demo3.html">監視画像一覧</a>
+			<a href="demo1.html">ログアウト</a>
+		</div>
+		<div id="temp1">			
+			監視機能デモ
+		</div>
+		<div>
+			新堰頭首工
+			<input type="button" name="btn1" onclick="ctlSuimon(1, 'tuujo')" class="tuujo" value="通常" >
+			<input type="button" name="btn1" onclick="ctlSuimon(1, 'sousa')" class="sousa" value="操作">
+			<input type="button" name="btn1" onclick="ctlSuimon(1, 'kessoku')" class="kessoku" value="欠測">
+			<input type="button" name="btn1" onclick="ctlSuimon(1, 'keikai')" class="keikai" value="警戒">
+		</div>
+
+		<div>
+			新堰頭首工(土砂吐)
+			<input type="button" name="btn1" onclick="ctlSuimon(2, 'tuujo')" class="tuujo" value="通常" >
+			<input type="button" name="btn1" onclick="ctlSuimon(2, 'sousa')" class="sousa" value="操作">
+			<input type="button" name="btn1" onclick="ctlSuimon(2, 'kessoku')" class="kessoku" value="欠測">
+			<input type="button" name="btn1" onclick="ctlSuimon(2, 'keikai')" class="keikai" value="警戒">
+		</div>
+
+		<div>
+			新堰1号水位調整ゲート
+			<input type="button" name="btn1" onclick="ctlSuimon(3, 'tuujo')" class="tuujo" value="通常" >
+			<input type="button" name="btn1" onclick="ctlSuimon(3, 'sousa')" class="sousa" value="操作">
+			<input type="button" name="btn1" onclick="ctlSuimon(3, 'kessoku')" class="kessoku" value="欠測">
+			<input type="button" name="btn1" onclick="ctlSuimon(3, 'keikai')" class="keikai" value="警戒">
+		</div>
+
+		<div>
+			新堰2号水位調整ゲート
+			<input type="button" name="btn1" onclick="ctlSuimon(4, 'tuujo')" class="tuujo" value="通常" >
+			<input type="button" name="btn1" onclick="ctlSuimon(4, 'sousa')" class="sousa" value="操作">
+			<input type="button" name="btn1" onclick="ctlSuimon(4, 'kessoku')" class="kessoku" value="欠測">
+			<input type="button" name="btn1" onclick="ctlSuimon(4, 'keikai')" class="keikai" value="警戒">
+		</div>
+
+		<div>
+			新堰3号水位調整ゲート
+			<input type="button" name="btn1" onclick="ctlSuimon(5, 'tuujo')" class="tuujo" value="通常" >
+			<input type="button" name="btn1" onclick="ctlSuimon(5, 'sousa')" class="sousa" value="操作">
+			<input type="button" name="btn1" onclick="ctlSuimon(5, 'kessoku')" class="kessoku" value="欠測">
+			<input type="button" name="btn1" onclick="ctlSuimon(5, 'keikai')" class="keikai" value="警戒">
+		</div>
+
+		<div>
+			大戸井第2取水口
+			<input type="button" name="btn1" onclick="ctlSuimon(6, 'tuujo')" class="tuujo" value="通常" >
+			<input type="button" name="btn1" onclick="ctlSuimon(6, 'sousa')" class="sousa" value="操作">
+			<input type="button" name="btn1" onclick="ctlSuimon(6, 'kessoku')" class="kessoku" value="欠測">
+			<input type="button" name="btn1" onclick="ctlSuimon(6, 'keikai')" class="keikai" value="警戒">
+		</div>
+
+		<div>
+			富田堰頭首工
+			<input type="button" name="btn1" onclick="ctlSuimon(7, 'tuujo')" class="tuujo" value="通常" >
+			<input type="button" name="btn1" onclick="ctlSuimon(7, 'sousa')" class="sousa" value="操作">
+			<input type="button" name="btn1" onclick="ctlSuimon(7, 'kessoku')" class="kessoku" value="欠測">
+			<input type="button" name="btn1" onclick="ctlSuimon(7, 'keikai')" class="keikai" value="警戒">
+		</div>
+
+		<div>
+			松尾堰頭首工
+			<input type="button" name="btn1" onclick="ctlSuimon(8, 'tuujo')" class="tuujo" value="通常" >
+			<input type="button" name="btn1" onclick="ctlSuimon(8, 'sousa')" class="sousa" value="操作">
+			<input type="button" name="btn1" onclick="ctlSuimon(8, 'kessoku')" class="kessoku" value="欠測">
+			<input type="button" name="btn1" onclick="ctlSuimon(8, 'keikai')" class="keikai" value="警戒">
+		</div>
+
+	</div>
+
+	<div id="kijo01">
+		<div class="lbl">新堰頭首工</div>
+		<img src="tuujo.png" class="suimon" id="suimon_1" >
+	</div>
+
+	<div id="kijo02">
+		<img src="tuujo.png" class="suimon" id="suimon_2" >
+		<div class="lbl">新堰頭首工(土砂吐)</div>
+	</div>
+	
+	<div id="kijo03">
+		<img src="tuujo.png" class="suimon" id="suimon_3" >
+		<div class="lbl">新堰1号水位調整ゲート</div>
+	</div>
+	
+	<div id="kijo04">
+		<img src="tuujo.png" class="suimon" id="suimon_4" >
+		<div class="lbl">新堰2号水位調整ゲート</div>
+	</div>
+	
+	<div id="kijo05">
+		<div class="lbl">新堰3号水位調整ゲート</div>
+		<img src="tuujo.png" class="suimon" id="suimon_5" >
+	</div>
+	
+	<div id="kijo06">
+		<img src="tuujo.png" class="suimon" id="suimon_6" >
+		<div class="lbl">大戸井第2取水口</div>
+	</div>
+	
+	<div id="kijo07">
+		<div class="lbl">富田堰頭首工</div>
+		<img src="tuujo.png" class="suimon" id="suimon_7" >
+	</div>
+	
+	<div id="kijo08">
+		<img src="tuujo.png" class="suimon" id="suimon_8" >
+		<br>
+		<div class="lbl2">松尾堰頭首工</div>
+	</div>
+	
+</body>
+</html>

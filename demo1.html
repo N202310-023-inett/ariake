@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>安曇野有明土地改良区－水門監視制御</title>
+	<style>
+		body{text-align: center;}
+		#login_waku{background-color: #ddd; display: inline-block;}
+		#waku_title{background-color: #444; color: white; text-align: left; padding: 2px; }
+		#waku2{margin: 3em 10em; background-color: white; }
+		input{border-radius: 5px; }
+		#waku2 input{width: 75%; margin: 1em; padding: 5px;}
+		input[type=text], input[type=password]{border: none; border-bottom: solid 1px #aaa; }
+		div.copyright{text-align: right; color: green; font-size: 0.7em}
+	</style>
+	<script>
+		function sbmt()
+		{
+			const uid = document.getElementById('uid').value;
+			const pswd = document.getElementById('pswd').value;
+
+			if(uid == 'ariake' && pswd == 'ariake')
+			{
+				window.location.href = 'demo2.html';
+			}
+			else
+			{
+				alert('ログインできませんでした。\n管理者に連絡してください。');
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="login_waku">
+		<div id="waku_title">管理者用システム　ログイン</div>
+		<div id="waku2">
+			<div style="padding: 1em 2em">ユーザーID、パスワードを入力してください。</div>
+			ID<input type="text" name="uid" id="uid" value="ariake" placeholder="ユーザーIDを入力">
+			<br>
+			Pass<input type="password" name="pswd" id="pswd" value="ariake" placeholder="パスワードを入力">
+			<br>
+			<input type="button" name="btn" value="ログイン" onclick="sbmt()">
+		</div>
+		<div class="copyright">無断転載を禁ず</div>
+		<div class="copyright">2026年3月　三基工業株式会社・株式会社アイネット</div>
+	</div>
+	
+</body>
+</html>

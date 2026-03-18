@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>安曇野有明土地改良区－水門画像一覧</title>
+	<style>
+		a{color: #08f; }
+		a:hover{color: gold; }
+		#div_menu a{display: inline-block; border: ridge 2px gray; font-size: 11pt; padding: 1px}
+		.div_row{margin-bottom: 1em; }
+		.div_img{display: inline-block;}
+		.c_name{background-color: #08f; color: white; padding: 2px; font-weight: bold;}
+		img{height: 250px}
+		#big_camera{display: none; }
+		#camera_name{background-color: #08f; color: white; padding: 2px; font-weight: bold; font-size: 16pt}
+		#camera_img{height: 800px}
+	</style>
+	<script>
+		function imgBig(f_name, c_name)
+		{
+			document.getElementById('camera_name').innerText = c_name;
+			document.getElementById('camera_img').src = f_name + '.jpg';
+			document.getElementById('list_camera').style.display = 'none';
+			document.getElementById('big_camera').style.display = 'block';
+		}
+
+		function imgList()
+		{
+			document.getElementById('list_camera').style.display = 'block';
+			document.getElementById('big_camera').style.display = 'none';
+		}
+
+	</script>
+</head>
+<body>
+<div id="div_menu">
+	<a href="demo2.html">水門状態監視</a>
+	<a href="demo1.html">ログアウト</a>
+</div>
+<div id="list_camera">
+
+	<div class="div_row">
+
+		<div class="div_img">
+			<div class="c_name">新堰頭首工</div>
+			<a href="javascript: imgBig(1, '新堰頭首工')"><img src="1.jpg"></a>
+		</div>
+
+		<div class="div_img">
+			<div class="c_name">新堰頭首工(土砂吐)</div>
+			<a href="javascript: imgBig(2, '新堰頭首工(土砂吐)')"><img src="2.jpg"></a>
+		</div>
+
+		<div class="div_img">
+			<div class="c_name">新堰1号水位調整ゲート</div>
+			<a href="javascript: imgBig(3, '新堰1号水位調整ゲート')"><img src="3.jpg"></a>
+		</div>
+
+		<div class="div_img">
+			<div class="c_name">新堰2号水位調整ゲート</div>
+			<a href="javascript: imgBig(4, '新堰2号水位調整ゲート')"><img src="4.jpg"></a>
+		</div>
+
+	</div>
+
+	<div class="div_row">
+
+		<div class="div_img">
+			<div class="c_name">新堰3号水位調整ゲート</div>
+			<a href="javascript: imgBig(5, '新堰3号水位調整ゲート')"><img src="5.jpg"></a>
+		</div>
+
+		<div class="div_img">
+			<div class="c_name">大戸井第2取水口</div>
+			<a href="javascript: imgBig(6, '大戸井第2取水口')"><img src="6.jpg"></a>
+		</div>
+
+		<div class="div_img">
+			<div class="c_name">富田堰頭首工</div>
+			<a href="javascript: imgBig(7, '富田堰頭首工')"><img src="7.jpg"></a>
+		</div>
+
+		<div class="div_img">
+			<div class="c_name">松尾堰頭首工</div>
+			<a href="javascript: imgBig(8, '松尾堰頭首工')"><img src="8.jpg"></a>
+		</div>
+			
+	</div>
+	
+</div>
+
+<div id="big_camera">
+	<div id="camera_name"></div>
+	<a href="javascript: imgList()"><img id="camera_img" src="">一覧に戻る</a>
+</div>
+
+</body>
+</html>
